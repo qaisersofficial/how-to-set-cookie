@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/qaisersofficial/how-to-set-cookie/issues"
   },
-  "homepage": "https://github.com/qaisersofficial/how-to-set-cookie#readme"
+  "homepage": "https://github.com/qaisersofficial/how-to-set-cookie#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2"
+  }
 }
