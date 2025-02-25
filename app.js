@@ -2,7 +2,8 @@ const express = require('express');
 const port = 3000;
 const app = express();
 app.get('/', (req, res) => {
-   res.send('Running...');
+   res.cookie("name", "Qaiser")
+   res.send('Cookie is set');
     });
 
     app.listen(port, () => {
