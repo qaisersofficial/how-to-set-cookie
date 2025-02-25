@@ -1,16 +1,11 @@
 const express = require('express');
 const port = 3000;
 const app = express();
-const bcrypt = require('bcrypt');
-const myPlaintextPassword = 'password'; // = $2b$10$T.gk8Ygrw9eQnvSP/oYvMOLmJ3mT78XPg0W9x81DEtOsnxeVW9tOa
+const jwt = require('jsonwebtoken');
+
 app.get('/', (req, res) => {
-    bcrypt.compare(myPlaintextPassword, '$2b$10$T.SP/oYvMOLmJ3mT78XPg0W9x81DEtOsnxeVW9tOa', function(err, result) {
-        if (result) {
-            res.send('Password is correct');
-        } else {
-            res.send('Password is incorrect');
-        }
-    });
+   let token = jwt.sign({ email: "qaisers.off@exm.com" }, 'secret');
+   console.log(token);
 });
 
     app.listen(port, () => {
